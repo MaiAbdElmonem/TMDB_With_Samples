@@ -17,7 +17,6 @@ protocol ListActorsPresenterProtocal: BasePresenterProtocol {
     func loadActors()
     func refreshActores()
     func loadMoreActores()
-    
 }
 
 protocol ListActorsViewProtocal:BaseViewProtocal {
