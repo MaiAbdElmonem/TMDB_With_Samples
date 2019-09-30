@@ -8,6 +8,6 @@
 
 import Foundation
 
-class ListActorsPresenter: BasePresenter {
+class ListActorsPresenter: BasePresenter , ListActorsPresenterProtocal {
     
 }

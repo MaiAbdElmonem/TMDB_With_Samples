@@ -11,7 +11,7 @@ import Foundation
 
 class ListActorsAdapter : ListActorsAdapterProtocal {
     
-//    typealias DataType = Person
+   typealias DataType = Person
     
     
 }
