@@ -24,5 +24,10 @@ protocol ListActorsViewProtocal:BaseViewProtocal {
 }
 
 protocol ListActorsModelProtocal:BaseModelProtocal {
-    func getActors(forPage page:Int , compelation: Result<Any,Error>)
+    func getActors(forPage page:Int , compelation: (Result<Any,Error>) ->Void)
+}
+
+
+protocol ListActorsAdapterProtocal:BaseListAdapterProtocal {
+   
 }

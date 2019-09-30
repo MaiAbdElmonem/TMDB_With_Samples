@@ -8,6 +8,7 @@
 
 import Foundation
 
-class ListActorsModel: BaseModel {
+class ListActorsModel: BaseModel, ListActorsModelProtocal {
+    
     
 }

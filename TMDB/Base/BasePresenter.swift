@@ -10,9 +10,9 @@ import Foundation
 
 class BasePresenter:NSObject, BasePresenterProtocol {
     
-    required init(view: BaseViewProtocal, model: BaseModelProtocal) {
-        
-    }
+//     init(view: BaseViewProtocal, model: BaseModelProtocal) {
+    
+//    }
     
     
 }

@@ -8,6 +8,10 @@
 
 import Foundation
 
-class ListActorsAdapter : BaseListAdapterProtocal {
+
+class ListActorsAdapter : ListActorsAdapterProtocal {
+    
+//    typealias DataType = Person
+    
     
 }
