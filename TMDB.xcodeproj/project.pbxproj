@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		2D165E7A2340E932007C58DF /* ActorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D165E782340E932007C58DF /* ActorTableViewCell.swift */; };
 		2D165E7B2340E932007C58DF /* ActorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D165E792340E932007C58DF /* ActorTableViewCell.xib */; };
+		2D214DD823434B4C007E6780 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D214DD723434B4C007E6780 /* Moya.framework */; };
 		2D5036682342005100E20EF9 /* ListActorsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5036672342005100E20EF9 /* ListActorsAdapter.swift */; };
 		2D50366A2342144600E20EF9 /* CreateModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5036692342144600E20EF9 /* CreateModule.swift */; };
 		2D50366C234214FF00E20EF9 /* ListActorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D50366B234214FF00E20EF9 /* ListActorsModel.swift */; };
 		2D50366E2342164900E20EF9 /* ListActorsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D50366D2342164900E20EF9 /* ListActorsPresenter.swift */; };
 		5D6AA1432342F8CE0055912D /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6AA1422342F8CD0055912D /* apple.png */; };
-		98B8CD6049353E68D10D88B7 /* Pods_TMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C5A53175785566AF881A9 /* Pods_TMDB.framework */; };
+		98B8CD6049353E68D10D88B7 /* Pods_TMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C5A53175785566AF881A9 /* Pods_TMDB.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F71BE3BB23327215005A0BA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71BE3BA23327215005A0BA4 /* AppDelegate.swift */; };
 		F71BE3C223327217005A0BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F71BE3C123327217005A0BA4 /* Assets.xcassets */; };
 		F71BE3D223327286005A0BA4 /* ListActorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71BE3D023327286005A0BA4 /* ListActorsViewController.swift */; };
@@ -50,6 +51,7 @@
 		14E7A82E9B83510EE763DD65 /* Pods-TMDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDB.release.xcconfig"; path = "Target Support Files/Pods-TMDB/Pods-TMDB.release.xcconfig"; sourceTree = "<group>"; };
 		2D165E782340E932007C58DF /* ActorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorTableViewCell.swift; sourceTree = "<group>"; };
 		2D165E792340E932007C58DF /* ActorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActorTableViewCell.xib; sourceTree = "<group>"; };
+		2D214DD723434B4C007E6780 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = SOURCE_ROOT; };
 		2D5036672342005100E20EF9 /* ListActorsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListActorsAdapter.swift; sourceTree = "<group>"; };
 		2D5036692342144600E20EF9 /* CreateModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateModule.swift; sourceTree = "<group>"; };
 		2D50366B234214FF00E20EF9 /* ListActorsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListActorsModel.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D214DD823434B4C007E6780 /* Moya.framework in Frameworks */,
 				98B8CD6049353E68D10D88B7 /* Pods_TMDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +145,7 @@
 		F71BE3B923327215005A0BA4 /* TMDB */ = {
 			isa = PBXGroup;
 			children = (
+				2D214DD723434B4C007E6780 /* Moya.framework */,
 				5D6AA1422342F8CD0055912D /* apple.png */,
 				F71BE3DB233272E8005A0BA4 /* AppDelegate */,
 				F71BE40023329ADA005A0BA4 /* Resources */,
@@ -306,6 +310,7 @@
 				F71BE3B423327215005A0BA4 /* Frameworks */,
 				F71BE3B523327215005A0BA4 /* Resources */,
 				F3D7340CAA516B58A0D34291 /* [CP] Embed Pods Frameworks */,
+				2D214DD923434BD5007E6780 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -367,6 +372,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2D214DD923434BD5007E6780 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
 		EDC04BFAF254489A8B8DF4B6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -403,7 +427,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TMDB/Pods-TMDB-frameworks.sh\"\n";
+			shellScript = "#\"${PODS_ROOT}/Target Support Files/Pods-TMDB/Pods-TMDB-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -582,6 +606,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 33CZ5Q8MSL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/TMDB/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -603,6 +631,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 33CZ5Q8MSL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/TMDB/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
