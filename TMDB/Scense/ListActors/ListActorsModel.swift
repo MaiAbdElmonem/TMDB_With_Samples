@@ -9,15 +9,18 @@
 import Foundation
 
 class ListActorsModel: BaseModel, ListActorsModelProtocal {
-    func getActors(forPage page:Int , compelation: (Result<Any,Error>) ->Void) {
-        NetworkManager.shared.getActors(pageNumber:1) { (result,statusCode) in
+    
+    func getActors(forPage page: Int, compelation: @escaping (Result<Any, Error>) -> Void) {
+        NetworkManager.shared.getActors(pageNumber:page) { (result,statusCode) in
             do {
-                let results = try result.get().results
-                compelation(.success(results))
+                let res = try result.get().results
+                compelation(.success(res!))
             } catch {
                 print(error)
                 compelation(.failure(error))
             }
         }
     }
+    
+   
 }

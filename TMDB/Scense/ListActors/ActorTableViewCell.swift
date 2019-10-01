@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ActorTableViewCell: UITableViewCell {
 
@@ -27,10 +28,10 @@ class ActorTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func configureCell(person : Person)  {
-          let  baseimageURL=URL(string: "https://image.tmdb.org/t/p/w500/")
-        let ImageUrl = baseimageURL?.appendingPathComponent(person.profilePath)
+        let baseimageURL=URL(string: "https://image.tmdb.org/t/p/w500/")
+        let ImageUrl = baseimageURL?.appendingPathComponent(person.profilePath!)
         actorName.text = person.name
-//        actorImage.sd_setImage(with: ImageUrl, placeholderImage: placeholderImage)
+        actorImage.sd_setImage(with: ImageUrl, placeholderImage: placeholderImage)
     }
     
 }

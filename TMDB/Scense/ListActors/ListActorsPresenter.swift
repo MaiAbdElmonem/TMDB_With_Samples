@@ -9,17 +9,33 @@
 import Foundation
 
 class ListActorsPresenter: BasePresenter , ListActorsPresenterProtocal {
+    func activateSearch() {
+        <#code#>
+    }
+    
+    func cancelSearch() {
+        <#code#>
+    }
+    
+    func refreshActores() {
+        <#code#>
+    }
+    
+    func loadMoreActores() {
+        
+    }
+    
     var ListActorModel : ListActorsModelProtocal?
     var ListActorView : ListActorsViewProtocal?
     var currentPage:Int = 1
     
     init(model : ListActorsModelProtocal , view : ListActorsViewProtocal) {
-        ListActorsModel = model
+        ListActorModel = model
         ListActorView = view
     }
     
     func loadActors() {
-        model?.getActors(forPage :currentPage) { result in
+        ListActorModel?.getActors(forPage :currentPage) { result in
             do {
             let results = try result.get()
             self.ListActorView?.getActorList(array: results as! [Person])

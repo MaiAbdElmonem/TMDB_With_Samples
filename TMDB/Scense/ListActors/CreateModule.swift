@@ -9,11 +9,12 @@
 import Foundation
 
 class Module {
-    static func ListAtorsModule() -> ListActorsViewController {
+    static func ListAtorsModule() -> ListActorsViewController { // as routuing
         let model = ListActorsModel()
         let view = ListActorsViewController()
-        let presenter = ListActorsPresenter(view: view, model: model)
+        let presenter = ListActorsPresenter(model: model, view: view)
         //run presenter of what view
+        view.setPresenter(presenter: presenter)
         return view    //to return and start listactors
     }
 }

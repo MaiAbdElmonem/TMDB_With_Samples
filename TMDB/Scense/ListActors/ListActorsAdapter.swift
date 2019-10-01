@@ -29,10 +29,10 @@ class ListActorsAdapter : ListActorsAdapterProtocal {
         
     }
     func count() -> Int{
-        return list?.count
+        return list?.count ?? 0
     }
     func isLastIndex(index: IndexPath) -> Bool{
-        
+        return true
     }
     func clear(reload: Bool){
         

@@ -9,13 +9,35 @@
 import UIKit
 
 class ListActorsViewController: BaseViewController< ListActorsPresenter > , ListActorsViewProtocal, UITableViewDelegate, UITableViewDataSource{
+  
     
-    var adapter = ListActorsAdapter
-    var presenter = ListActorsPresenter
+    @IBOutlet weak var actorsTableView: UITableView!
+    
+    var adapter = ListActorsAdapter()
+    var presenter = ListActorsPresenterProtocal
+    
     override func viewDidLoad() {
-        
-        let actorCell = UINib (nibName: ActorTableViewCell, bundle: nil)
-        
+        actorsTableView.dataSource=self
+        actorsTableView.delegate=self
+        //register custom cell
+        let actorCell = UINib (nibName: "ActorTableViewCell", bundle: nil)
+        actorsTableView.register(actorCell, forCellReuseIdentifier: "ActorTableViewCell")
+        adapter.reloadData = reloadTableData
     }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return adapter.count()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    func getActorList(array: [Person]) {
+        <#code#>
+    }
+    
+    func reloadTableData() {
+        actorsTableView.reloadData()
+    }
 }
