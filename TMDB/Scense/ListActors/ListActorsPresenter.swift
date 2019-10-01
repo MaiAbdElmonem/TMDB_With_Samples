@@ -9,21 +9,7 @@
 import Foundation
 
 class ListActorsPresenter: BasePresenter , ListActorsPresenterProtocal {
-    func activateSearch() {
-        <#code#>
-    }
     
-    func cancelSearch() {
-        <#code#>
-    }
-    
-    func refreshActores() {
-        <#code#>
-    }
-    
-    func loadMoreActores() {
-        
-    }
     
     var ListActorModel : ListActorsModelProtocal?
     var ListActorView : ListActorsViewProtocal?

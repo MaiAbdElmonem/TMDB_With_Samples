@@ -14,14 +14,15 @@ class ListActorsViewController: BaseViewController< ListActorsPresenter > , List
     @IBOutlet weak var actorsTableView: UITableView!
     
     var adapter = ListActorsAdapter()
-    var presenter = ListActorsPresenterProtocal
+//    var presenter = ListActorsPresenterProtocal
     
     override func viewDidLoad() {
         actorsTableView.dataSource=self
         actorsTableView.delegate=self
         //register custom cell
         let actorCell = UINib (nibName: "ActorTableViewCell", bundle: nil)
-        actorsTableView.register(actorCell, forCellReuseIdentifier: "ActorTableViewCell")
+        actorsTableView.register(actorCell, forCellReuseIdentifier: "ActorCell")
+        presenter.loadActors()
         adapter.reloadData = reloadTableData
     }
 
@@ -30,11 +31,13 @@ class ListActorsViewController: BaseViewController< ListActorsPresenter > , List
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ActorCell", for: indexPath) as! ActorTableViewCell
+        let getPersonObject = adapter.getPerson(index: indexPath.row)
+        cell.configureCell(person: getPersonObject)
     }
     
     func getActorList(array: [Person]) {
-        <#code#>
+        adapter.add(items: array)
     }
     
     func reloadTableData() {

@@ -37,4 +37,15 @@ class ListActorsAdapter : ListActorsAdapterProtocal {
     func clear(reload: Bool){
         
     }
+    
+    func getPerson(index:Int) -> Person {
+        return list[index]
+    }
+//    func getPersonName(index:Int) -> String {
+//        return list[index].name
+//}
+//    func getPersonImage(index:Int) -> String {
+//        return list[index].profile_path
+//    }
+    
 }
