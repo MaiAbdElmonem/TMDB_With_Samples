@@ -20,7 +20,7 @@ protocol ListActorsPresenterProtocal: BasePresenterProtocol {
 }
 
 protocol ListActorsViewProtocal:BaseViewProtocal {
-    
+    func getActorList(array : [Person])
 }
 
 protocol ListActorsModelProtocal:BaseModelProtocal {

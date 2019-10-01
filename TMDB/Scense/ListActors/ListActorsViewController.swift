@@ -8,6 +8,14 @@
 
 import UIKit
 
-class ListActorsViewController: UIViewController {
+class ListActorsViewController: BaseViewController< ListActorsPresenter > , ListActorsViewProtocal, UITableViewDelegate, UITableViewDataSource{
+    
+    var adapter = ListActorsAdapter
+    var presenter = ListActorsPresenter
+    override func viewDidLoad() {
+        
+        let actorCell = UINib (nibName: ActorTableViewCell, bundle: nil)
+        
+    }
 
 }
