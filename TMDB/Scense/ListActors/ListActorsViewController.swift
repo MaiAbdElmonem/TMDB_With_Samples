@@ -14,7 +14,7 @@ class ListActorsViewController: BaseViewController< ListActorsPresenter > , List
     @IBOutlet weak var actorsTableView: UITableView!
     
     var adapter = ListActorsAdapter()
-//    var presenter = ListActorsPresenterProtocal
+
     
     override func viewDidLoad() {
         actorsTableView.dataSource=self
@@ -34,6 +34,7 @@ class ListActorsViewController: BaseViewController< ListActorsPresenter > , List
         let cell = tableView.dequeueReusableCell(withIdentifier: "ActorCell", for: indexPath) as! ActorTableViewCell
         let getPersonObject = adapter.getPerson(index: indexPath.row)
         cell.configureCell(person: getPersonObject)
+        return cell
     }
     
     func getActorList(array: [Person]) {

@@ -10,6 +10,8 @@ import Foundation
 
 protocol ListActorsPresenterProtocal: BasePresenterProtocol {
     
+    
+   
     var currentPage:Int { get set }
     
     func activateSearch()
